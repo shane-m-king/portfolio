@@ -12,7 +12,7 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-2 items-start">
         
           {/* LEFT COLUMN */}
-          <div className="space-y-6 ml-28 md:ml-2">        
+          <div className="space-y-6 ml-2 md:ml-28 ml-2">        
             <h1 className="text-3xl font-semibold tracking-tight">
               Hey, I'm Shane — a full-stack software engineer based in Seattle.
             </h1>

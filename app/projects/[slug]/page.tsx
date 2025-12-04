@@ -33,7 +33,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <p className="nk-heading-pixel text-lg text-nk-accent uppercase ml-4">Project</p>
       <article className="space-y-12 max-w-[90%] mx-auto mt-2">
         <header className="grid gap-6 md:grid-cols-2 items-start">
-          <div className="space-y-4 mt-10 ml-15 md:ml-4">
+          <div className="space-y-4 mt-10 ml-4 md:ml-15 ml-4">
             <h1 className="text-3xl md:text-3xl font-semibold tracking-tight">
               {project.name}
             </h1>
