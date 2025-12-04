@@ -29,7 +29,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <>
-      <TetrisBackdrop layout="project"/>
+      <div className="hidden md:block"><TetrisBackdrop layout="project" /></div>
       <p className="nk-heading-pixel text-lg text-nk-accent uppercase ml-4">Project</p>
       <article className="space-y-12 max-w-[90%] mx-auto mt-2">
         <header className="grid gap-6 md:grid-cols-2 items-start">
