@@ -20,33 +20,9 @@ This site showcases my projects, background, and contact information in a clean,
 
 ---
 
-## 🖼️ Portfolio Preview
+## Portfolio Preview
 
-![Portfolio Homepage](./public/Images/PortfolioHome.png)
-
----
-
-## Project Structure
-
-/
-├── app/
-│ ├── about/
-│ ├── contact/
-│ ├── projects/
-│ ├── globals.css
-│ └── layout.tsx
-├── components/
-│ ├── Footer.tsx
-│ ├── NavBar.tsx
-│ ├── ProjectCard.tsx
-│ ├── ProjectImageCarousel.tsx
-│ └── TetrisBackdrop.tsx
-├── data/
-├── public/
-│ ├── Images/
-│ └── Shane-King-Resume.pdf
-├── package.json
-└── README.md
+![Portfolio Homepage](./public/images/PortfolioHome.png)
 
 ---
 
