@@ -1,26 +1,181 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+
+  --background: #020617;
+  --foreground: #e5e7eb;
+
+  --tetris-unit: 50px; /* Changes tetris block size and grid size */
 }
 
 @theme inline {
+  /* Map default tokens */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Custom colors for the Neon Pixel theme */
+  --color-nk-bg: #010828;
+  --color-nk-accent: #22c55e;
+  --color-nk-accent-soft: #16a34a;
+  --color-nk-accent-muted: #15803d;
+  --color-nk-border: #1f2937;
+
+  /* Custom radii so rounded-nk & rounded-nk-lg work */
+  --radius-nk: 0.75rem;
+  --radius-nk-lg: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Global body styles */
+body {
+  @apply bg-nk-bg text-slate-100;
+  position: relative;
+  overflow-x: hidden;
+  font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  text-shadow: 1px 1px 1px black;
+}
+
+/* Press Start 2P Font */
+.font-pixel {
+  font-family: var(--font-pixel), monospace;
+}
+
+/* Background Grid */
+.nk-bg-grid {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.4; 
+  background-position: top left;
+  background-size: var(--tetris-unit) var(--tetris-unit);
+
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(174, 208, 174, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(174, 208, 174, 0.15) 1px,
+      transparent 1px
+    );
+}
+
+/* UI Components */
+@layer components {
+  /* Base card */
+  .nk-card {
+    @apply relative rounded-nk border border-nk-border bg-slate-900/40
+      hover:bg-slate-900/70 transition-colors;
+  }
+
+  /* Elevated card */
+  .nk-card-elevated {
+    @apply relative rounded-nk border border-nk-border bg-slate-900/60
+      hover:bg-slate-900/80 transition-colors
+      shadow-[0_18px_40px_rgba(15,23,42,0.7)];
+  }
+
+  /* Chips */
+  .nk-chip {
+    @apply inline-flex items-center gap-1 rounded-full border border-nk-border
+      bg-slate-900/60 px-2 py-0.5 text-[0.65rem] uppercase tracking-wide
+      text-slate-300;
+  }
+
+  /* Accent chip */
+  .nk-chip-accent {
+    @apply inline-flex items-center gap-1 rounded-full border border-nk-accent
+      bg-slate-900/60 px-2 py-0.5 text-[0.65rem] uppercase tracking-wide
+      text-nk-accent;
+  }
+
+  /* Primary button */
+  .nk-btn-primary {
+    @apply inline-flex items-center justify-center rounded-md border border-nk-accent
+      bg-nk-accent/10 px-4 py-2 text-sm font-medium text-nk-accent
+      hover:bg-nk-accent hover:text-nk-bg
+      hover:shadow-[0_0_20px_rgba(34,197,94,0.35)]
+      transition;
+  }
+
+  /* Subtle button */
+  .nk-btn-ghost {
+    @apply inline-flex items-center justify-center rounded-md border border-nk-accent-muted/60
+      bg-slate-900/40 px-4 py-2 text-sm text-slate-200
+      hover:bg-slate-800/80 hover:border-nk-accent/70 hover:text-nk-accent
+      transition;
+  }
+
+  /* Pixel heading label */
+  .nk-heading-pixel {
+  @apply text-[0.7rem] tracking-[0.25em] uppercase text-nk-accent;
+  font-family: var(--font-pixel), monospace; /* <-- moved out of @apply */
+}
+
+  /* Link style */
+  .nk-link {
+    @apply underline underline-offset-4 decoration-nk-accent/70
+      hover:text-nk-accent hover:decoration-nk-accent transition;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Tetris Block System */
+
+.tetris-block {
+  position: absolute;
+  box-sizing: border-box;
+  width: calc(var(--tetris-unit) * var(--w));
+  height: calc(var(--tetris-unit) * var(--h));
+  opacity: 0.4;
+  border: 3px solid rgba(0, 0, 0, 0.75);
+  box-shadow:
+    0 0 8px rgba(0, 0, 0, 0.4),
+    inset 0 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
 }
+
+/* Tetris Block Colors */
+.tcolor-blue { background: #11d5ef; }
+.tcolor-green { background: #048032; }
+.tcolor-purple { background: #6605c0; }
+.tcolor-red { background: #9c0101; }
+.tcolor-yellow { background: #e2db11; }
+
+/* Shapes */
+.tetris-I { --w: 4; --h: 1; }
+.tetris-O { --w: 2; --h: 2; }
+
+.tetris-L {
+  --w: 3;
+  --h: 2;
+  clip-path: polygon(
+    0 0,          33.333% 0,        33.333% 50%,
+    100% 50%,     100% 100%,        0 100%         
+  );
+}
+
+.tetris-T {
+  --w: 3;
+  --h: 2;
+  clip-path: polygon(
+    0 0,          100% 0,           100% 50%,      
+    66.666% 50%,  66.666% 100%,     33.333% 100%,  
+    33.333% 50%,  0 50%                                
+  );
+}
+
+.tetris-Z {
+  --w: 3;
+  --h: 2;
+  clip-path: polygon(
+    0 0,           66.666% 0,
+    66.666% 50%,   100% 50%,
+    100% 100%,     33.333% 100%,
+    33.333% 50%,   0 50%
+  );
+}
+

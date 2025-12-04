@@ -1,65 +1,75 @@
-import Image from "next/image";
+import Link from "next/link";
+import { projects } from "@/data/projects";
+import ProjectCard from "@/components/ProjectCard";
+import TetrisBackdrop from "@/components/TetrisBackdrop";
 
-export default function Home() {
+export default function HomePage() {
+  const featured = projects[0];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <TetrisBackdrop layout="home" />
+      <p className="nk-heading-pixel text-[1.15rem] text-nk-accent">
+          SOFTWARE ENGINEER • SEATTLE
+      </p>
+      <section className="space-y-14 md:space-y-16 relative z-5 mt-1">
+        {/* TWO-COLUMN HERO SECTION */}
+        <div className="grid gap-2 md:grid-cols-[minmax(0,2fr)_minmax(0,1.8fr)] ml-[5%] max-w-[90%] items-start">
+          {/* LEFT COLUMN: intro text */}
+          <div className="space-y-6 mt-7">
+            <h1 className="text-3xl md:text-[2.1rem] font-semibold tracking-tight max-w-[92%]">
+              I build full-stack web apps with{" "}
+              <span className="text-nk-accent">Next.js</span> and a focus on
+              clean architecture, great UX, and game-inspired polish.
+            </h1>
+
+            <p className="text-slate-300 max-w-xl text-base md:text-base">
+              Former Twitch creator turned software engineer. I love building
+              game-adjacent tools, applications, and systems that feel responsive,
+              intuitive, and fun to use.
+            </p>
+          </div>
+
+          {/* RIGHT COLUMN: CTA panel */}
+          <div className="space-y-5 mt-4 md:mt-8">
+            <div className="nk-card-elevated p-4 md:p-5 flex flex-col gap-3 bg-slate-800/60 backdrop-blur-sm border-nk-accent-muted/60">
+              <p className="nk-heading-pixel text-center text-lg text-slate-300 mb-1">
+                START HERE
+              </p>
+
+              <p className="text-[1.1rem] text-center text-slate-300 mb-1">
+                Jump into my projects to see what I've been up to, or learn a bit more about me.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/projects"
+                  className="nk-btn-primary w-full justify-center text-base py-3"
+                >
+                  View Projects
+                </Link>
+
+                <Link
+                  href="/about"
+                  className="nk-btn-ghost w-full justify-center text-base py-3"
+                >
+                  About Me
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* FEATURED PROJECT — BELOW BOTH COLUMNS */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-xl">
+            <p className="nk-heading-pixel text-lg text-slate-400 mb-2 text-center">
+              FEATURED PROJECT
+            </p>
+            <ProjectCard project={featured} compact />
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
