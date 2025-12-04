@@ -120,7 +120,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </ul>
               {project.futureImprovements.length > 0 && (
                 <>
-                  <h3 className="text-[1.1rem] text-center font-semibold uppercase tracking-wide text-slate-300 border-t border-nk-accent-muted/40 pt-2 mt-2">Next Steps</h3>
+                  <h3 className="text-[1.1rem] text-center font-semibold uppercase tracking-wide text-slate-300 border-t border-nk-accent-muted/40 pt-4 mt-4">Next Steps</h3>
                   <ul className="text-[0.9rem] text-slate-200 space-y-3">
                     {project.futureImprovements.map((item) => (
                       <li key={item}>{item}</li>
