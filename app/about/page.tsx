@@ -3,7 +3,7 @@ import TetrisBackdrop from "@/components/TetrisBackdrop";
 export default function AboutPage() {
   return (
     <>
-      <TetrisBackdrop layout="about" />
+      <div className="hidden md:block"><TetrisBackdrop layout="about" /></div>
       <p className="ml-8 nk-heading-pixel text-lg uppercase tracking-[0.25em] text-nk-accent">
          About Me
       </p>

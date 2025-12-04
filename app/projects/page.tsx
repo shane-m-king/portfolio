@@ -5,7 +5,7 @@ import TetrisBackdrop from "@/components/TetrisBackdrop";
 export default function ProjectsPage() {
   return (
     <>
-      <TetrisBackdrop layout="projects"/>
+      <div className="hidden md:block"><TetrisBackdrop layout="projects" /></div>
       <section className="space-y-6">
         <header className="space-y-2">
           <p className="nk-heading-pixel text-lg uppercase tracking-[0.25em] text-nk-accent">

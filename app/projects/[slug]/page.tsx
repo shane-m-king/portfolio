@@ -16,7 +16,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   if (!project) {
     return (
       <>
-        <TetrisBackdrop layout="projects"/>
+        <div className="hidden md:block"><TetrisBackdrop layout="project" /></div>
         <div>
           <h1 className="text-xl font-semibold mb-2">Project not found</h1>
           <Link href="/projects" className="text-sm text-emerald-300 underline">

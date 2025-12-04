@@ -3,7 +3,7 @@ import TetrisBackdrop from "@/components/TetrisBackdrop";
 export default function ContactPage() {
   return (
     <>
-      <TetrisBackdrop layout="contact" />
+      <div className="hidden md:block"><TetrisBackdrop layout="contact" /></div>
       <p className="text-center nk-heading-pixel text-2xl uppercase tracking-[0.25em] text-nk-accent">
         Contact
       </p>

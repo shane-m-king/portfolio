@@ -8,7 +8,7 @@ export default function HomePage() {
 
   return (
     <>
-      <TetrisBackdrop layout="home" />
+      <div className="hidden md:block"><TetrisBackdrop layout="home" /></div>
       <p className="nk-heading-pixel text-[1.15rem] text-nk-accent">
           SOFTWARE ENGINEER • SEATTLE
       </p>
