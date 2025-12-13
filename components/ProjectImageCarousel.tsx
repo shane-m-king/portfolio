@@ -13,11 +13,8 @@ export default function ProjectImageCarousel({ images, alt }: Props) {
   const [index, setIndex] = useState(0);
   const [isZoomed, setIsZoomed] = useState(false);
 
-  const prev = () =>
-    setIndex((prev) => (prev - 1 + images.length) % images.length);
-
-  const next = () =>
-    setIndex((prev) => (prev + 1) % images.length);
+  const prev = () => setIndex((prev) => (prev - 1 + images.length) % images.length);
+  const next = () => setIndex((prev) => (prev + 1) % images.length);
 
   const handlers = useSwipeable({
     onSwipedLeft: next,
@@ -29,35 +26,30 @@ export default function ProjectImageCarousel({ images, alt }: Props) {
 
   const src = images[index];
 
-  // Keyboard controls when zoomed: Escape to close, arrows to navigate
   useEffect(() => {
     if (!isZoomed) return;
-
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setIsZoomed(false);
-      } else if (e.key === "ArrowLeft") {
-        prev();
-      } else if (e.key === "ArrowRight") {
-        next();
-      }
+      if (e.key === "Escape") setIsZoomed(false);
+      else if (e.key === "ArrowLeft") prev();
+      else if (e.key === "ArrowRight") next();
     };
-
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [isZoomed, images.length]); // images.length only to satisfy lint; prev/next use it
+  }, [isZoomed, images.length]);
 
   return (
     <>
       {/* CAROUSEL */}
-      <div className="flex flex-col items-center gap-2 w-full">
+      <div className="flex flex-col items-center gap-[calc(var(--tetris-unit)*0.1)] w-full">
         {/* IMAGE WRAPPER */}
         <div
           {...handlers}
           className="
-            relative w-[90%] md:w-[80%] aspect-[16/9]
+            relative
+            w-full max-w-[calc(var(--tetris-unit)*8)] md:max-w-[calc(var(--tetris-unit)*11)]
+            aspect-[16/9]
             rounded-lg border border-nk-accent-muted/60 overflow-hidden
-            shadow-[0_0_18px_rgba(34,197,94,0.15)]
+            shadow-[0_0_calc(var(--tetris-unit)*0.6)_rgba(34,197,94,0.15)]
             cursor-zoom-in
           "
           onClick={() => setIsZoomed(true)}
@@ -72,69 +64,54 @@ export default function ProjectImageCarousel({ images, alt }: Props) {
 
         {/* ARROWS */}
         {images.length > 1 && (
-          <div className="flex items-center justify-center gap-3 mt-2">
+          <div className="flex items-center justify-center gap-[calc(var(--tetris-unit)*0.5)] mt-[calc(var(--tetris-unit)*0.1)]">
             <button
               type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                prev();
-              }}
+              onClick={(e) => { e.stopPropagation(); prev(); }}
               className="
-                text-xs
-                font-pixel tracking-wide
+                text-xs font-pixel tracking-wide
                 bg-slate-900/70 hover:bg-slate-800/90
                 border border-nk-accent-muted/60
                 text-slate-200
-                rounded-full w-8 h-8 flex items-center justify-center
+                rounded-full w-[calc(var(--tetris-unit)*1)] h-[calc(var(--tetris-unit)*1)]
+                flex items-center justify-center
                 backdrop-blur-sm
                 transition
                 cursor-pointer
               "
-            >
-              ←
-            </button>
+            >←</button>
 
             <button
               type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                next();
-              }}
+              onClick={(e) => { e.stopPropagation(); next(); }}
               className="
-                text-xs
-                font-pixel tracking-wide
+                text-xs font-pixel tracking-wide
                 bg-slate-900/70 hover:bg-slate-800/90
                 border border-nk-accent-muted/60
                 text-slate-200
-                rounded-full w-8 h-8 flex items-center justify-center
+                rounded-full w-[calc(var(--tetris-unit)*1)] h-[calc(var(--tetris-unit)*1)]
+                flex items-center justify-center
                 backdrop-blur-sm
                 transition
                 cursor-pointer
               "
-            >
-              →
-            </button>
+            >→</button>
           </div>
         )}
 
         {/* DOTS */}
         {images.length > 1 && (
-          <div className="flex gap-2 mt-1">
+          <div className="flex gap-[calc(var(--tetris-unit)*0.35)] mt-[calc(var(--tetris-unit)*0.05)]">
             {images.map((_, i) => (
               <button
                 key={i}
                 type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setIndex(i);
-                }}
+                onClick={(e) => { e.stopPropagation(); setIndex(i); }}
                 className={`
-                  w-2.5 h-2.5 rounded-full transition
-                  ${
-                    index === i
-                      ? "bg-emerald-400 scale-125"
-                      : "bg-slate-600 hover:bg-slate-500"
-                  }
+                  w-[calc(var(--tetris-unit)*0.2)]
+                  h-[calc(var(--tetris-unit)*0.2)]
+                  rounded-full transition
+                  ${index === i ? "bg-emerald-400 scale-125" : "bg-slate-600 hover:bg-slate-500"}
                 `}
               />
             ))}
@@ -145,24 +122,19 @@ export default function ProjectImageCarousel({ images, alt }: Props) {
       {/* LIGHTBOX MODAL */}
       {isZoomed && (
         <div
-          className="
-            fixed inset-0 z-40
-            flex items-center justify-center
-            bg-black/70
-            p-4
-          "
+          className="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-[calc(var(--tetris-unit)*0.3)]"
           onClick={() => setIsZoomed(false)}
           aria-modal="true"
           role="dialog"
         >
           <div
             className="
-              relative w-full max-w-5xl aspect-[16/9]
+              relative w-full max-w-[calc(var(--tetris-unit)*22)] aspect-[16/9]
               rounded-lg overflow-hidden
               border border-nk-accent-muted/70
               bg-slate-950
             "
-            onClick={(e) => e.stopPropagation()} // keep clicks inside from closing
+            onClick={(e) => e.stopPropagation()}
           >
             <Image
               src={src}
@@ -177,8 +149,8 @@ export default function ProjectImageCarousel({ images, alt }: Props) {
               type="button"
               onClick={() => setIsZoomed(false)}
               className="
-                absolute top-3 right-3
-                rounded-full px-3 py-1
+                absolute top-[calc(var(--tetris-unit)*0.25)] right-[calc(var(--tetris-unit)*0.25)]
+                rounded-full px-[calc(var(--tetris-unit)*0.25)] py-[calc(var(--tetris-unit)*0.15)]
                 text-xs font-medium
                 bg-slate-900/80 hover:bg-slate-800
                 border border-nk-accent-muted/70
@@ -198,8 +170,9 @@ export default function ProjectImageCarousel({ images, alt }: Props) {
                   type="button"
                   onClick={prev}
                   className="
-                    absolute left-3 top-1/2 -translate-y-1/2
-                    rounded-full w-9 h-9
+                    absolute left-[calc(var(--tetris-unit)*0.25)] top-1/2 -translate-y-1/2
+                    rounded-full
+                    w-[calc(var(--tetris-unit)*1.4)] h-[calc(var(--tetris-unit)*1.4)]
                     flex items-center justify-center
                     bg-slate-900/80 hover:bg-slate-800
                     border border-nk-accent-muted/70
@@ -209,16 +182,15 @@ export default function ProjectImageCarousel({ images, alt }: Props) {
                     transition
                     cursor-pointer
                   "
-                >
-                  ←
-                </button>
+                >←</button>
 
                 <button
                   type="button"
                   onClick={next}
                   className="
-                    absolute right-3 top-1/2 -translate-y-1/2
-                    rounded-full w-9 h-9
+                    absolute right-[calc(var(--tetris-unit)*0.25)] top-1/2 -translate-y-1/2
+                    rounded-full
+                    w-[calc(var(--tetris-unit)*1.4)] h-[calc(var(--tetris-unit)*1.4)]
                     flex items-center justify-center
                     bg-slate-900/80 hover:bg-slate-800
                     border border-nk-accent-muted/70
@@ -228,9 +200,7 @@ export default function ProjectImageCarousel({ images, alt }: Props) {
                     transition
                     cursor-pointer
                   "
-                >
-                  →
-                </button>
+                >→</button>
               </>
             )}
           </div>

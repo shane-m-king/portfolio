@@ -6,7 +6,8 @@
   --background: #020617;
   --foreground: #e5e7eb;
 
-  --tetris-unit: 50px; /* Changes tetris block size and grid size */
+  /* Tetris block + grid size */
+  --tetris-unit: max(3dvw, 12px);
 }
 
 @theme inline {
@@ -33,7 +34,13 @@ body {
   overflow-x: hidden;
   font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
-  text-shadow: 1px 1px 1px black;
+
+  /* Replaces 1px shadow with proportional equivalent */
+  text-shadow:
+    calc(var(--tetris-unit) * 0.02)
+    calc(var(--tetris-unit) * 0.02)
+    calc(var(--tetris-unit) * 0.02)
+    black;
 }
 
 /* Press Start 2P Font */
@@ -112,9 +119,9 @@ body {
 
   /* Pixel heading label */
   .nk-heading-pixel {
-  @apply text-[0.7rem] tracking-[0.25em] uppercase text-nk-accent;
-  font-family: var(--font-pixel), monospace; /* <-- moved out of @apply */
-}
+    @apply text-[0.7rem] tracking-[0.25em] uppercase text-nk-accent;
+    font-family: var(--font-pixel), monospace;
+  }
 
   /* Link style */
   .nk-link {
@@ -128,14 +135,23 @@ body {
 .tetris-block {
   position: absolute;
   box-sizing: border-box;
+
   width: calc(var(--tetris-unit) * var(--w));
   height: calc(var(--tetris-unit) * var(--h));
   opacity: 0.4;
-  border: 3px solid rgba(0, 0, 0, 0.75);
+
+  /* Replace 3px with proportional border */
+  border-width: calc(var(--tetris-unit) * 0.06);
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.75);
+
+  /* Replace 8px + 6px shadows with proportional values */
   box-shadow:
-    0 0 8px rgba(0, 0, 0, 0.4),
-    inset 0 0 6px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+    0 0 calc(var(--tetris-unit) * 0.16) rgba(0, 0, 0, 0.4),
+    inset 0 0 calc(var(--tetris-unit) * 0.12) rgba(0, 0, 0, 0.2);
+
+  /* Replace 3px with proportional radius */
+  border-radius: calc(var(--tetris-unit) * 0.06);
 }
 
 /* Tetris Block Colors */
@@ -164,7 +180,7 @@ body {
   clip-path: polygon(
     0 0,          100% 0,           100% 50%,      
     66.666% 50%,  66.666% 100%,     33.333% 100%,  
-    33.333% 50%,  0 50%                                
+    33.333% 50%,  0 50%                                 
   );
 }
 
@@ -178,4 +194,3 @@ body {
     33.333% 50%,   0 50%
   );
 }
-

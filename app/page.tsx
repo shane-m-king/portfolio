@@ -9,14 +9,31 @@ export default function HomePage() {
   return (
     <>
       <div className="hidden md:block"><TetrisBackdrop layout="home" /></div>
-      <p className="nk-heading-pixel text-[1.15rem] text-nk-accent">
+      <p className="nk-heading-pixel text-[calc(var(--tetris-unit)*0.4)] text-nk-accent">
           SOFTWARE ENGINEER • SEATTLE
       </p>
-      <section className="space-y-14 md:space-y-16 relative z-5 mt-1">
+      <section
+        className="
+          relative z-5
+          mt-[calc(var(--tetris-unit)*0.3)]
+          space-y-[calc(var(--tetris-unit)*1.2)]
+          md:space-y-[calc(var(--tetris-unit)*1.5)]
+        "
+      >
         {/* TWO-COLUMN HERO SECTION */}
-        <div className="grid gap-2 md:grid-cols-[minmax(0,2fr)_minmax(0,1.8fr)] ml-[5%] max-w-[90%] items-start">
+        <div
+          className="
+            grid
+            items-start
+            gap-[calc(var(--tetris-unit)*1)]
+            md:grid-cols-[minmax(0,2fr)_minmax(0,1.8fr)]
+            mx-auto
+            max-w-[calc(var(--tetris-unit)*120)]
+            px-[calc(var(--tetris-unit)*1.2)]
+          "
+        > 
           {/* LEFT COLUMN: intro text */}
-          <div className="space-y-6 mt-7">
+          <div className="space-y-[calc(var(--tetris-unit)*0.7)] mt-[calc(var(--tetris-unit)*0.6)]">
             <h1 className="text-3xl md:text-[2.1rem] font-semibold tracking-tight max-w-[92%]">
               I build full-stack web apps with{" "}
               <span className="text-nk-accent">Next.js</span> and a focus on
@@ -31,8 +48,8 @@ export default function HomePage() {
           </div>
 
           {/* RIGHT COLUMN: CTA panel */}
-          <div className="space-y-5 mt-4 md:mt-8">
-            <div className="nk-card-elevated p-4 md:p-5 flex flex-col gap-3 bg-slate-800/60 backdrop-blur-sm border-nk-accent-muted/60">
+          <div className="space-y-[calc(var(--tetris-unit)*0.7)] mt-[calc(var(--tetris-unit)*0.6)]">
+            <div className="nk-card-elevated p-[calc(var(--tetris-unit)*0.4)] flex flex-col gap-[calc(var(--tetris-unit)*0.3)] bg-slate-800/60 backdrop-blur-sm border-nk-accent-muted/60">
               <p className="nk-heading-pixel text-center text-lg text-slate-300 mb-1">
                 START HERE
               </p>
@@ -62,7 +79,7 @@ export default function HomePage() {
 
         {/* FEATURED PROJECT — BELOW BOTH COLUMNS */}
         <div className="flex justify-center">
-          <div className="w-full max-w-xl">
+          <div className="w-full max-w-[calc(var(--tetris-unit)*14)]">
             <p className="nk-heading-pixel text-lg text-slate-400 mb-2 text-center">
               FEATURED PROJECT
             </p>

@@ -5,20 +5,40 @@ import TetrisBackdrop from "@/components/TetrisBackdrop";
 export default function ProjectsPage() {
   return (
     <>
-      <div className="hidden md:block"><TetrisBackdrop layout="projects" /></div>
-      <section className="space-y-6">
-        <header className="space-y-2">
-          <p className="nk-heading-pixel text-lg uppercase tracking-[0.25em] text-nk-accent">
+      <div className="hidden md:block">
+        <TetrisBackdrop layout="projects" />
+      </div>
+
+      <section
+        className="
+          relative z-10
+          mx-auto
+          max-w-[calc(var(--tetris-unit)*120)]
+          space-y-[calc(var(--tetris-unit)*0.8)]
+        "
+      >
+        {/* HEADER */}
+        <header className="space-y-[calc(var(--tetris-unit)*0.6)]">
+          <p className="nk-heading-pixel text-[calc(var(--tetris-unit)*0.4)] uppercase tracking-[0.25em] text-nk-accent">
             Projects
           </p>
-          <p className="text-[1.1rem] text-slate-300 max-w-xl ml-[1%]">
+
+          <p className="text-xl text-slate-300 max-w-[calc(var(--tetris-unit)*36)]">
             A selection of full-stack, backend, and frontend projects built with
             Next.js, Node, React, and modern tooling.
           </p>
         </header>
-        <div className="grid gap-6 md:grid-cols-3 ml-[1%] max-w-[98%]">
+
+        {/* PROJECT GRID */}
+        <div
+          className="
+            grid
+            gap-[calc(var(--tetris-unit)*0.5)]
+            md:grid-cols-3
+          "
+        >
           {projects.map((project) => (
-           <ProjectCard key={project.slug} project={project} />
+            <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
       </section>

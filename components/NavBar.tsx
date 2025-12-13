@@ -2,33 +2,91 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <header className="border-b border-nk-border bg-slate-950/80 backdrop-blur-md sticky top-0 z-20">
-      <nav className="container mx-auto px-4 py-2 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="relative w-14 h-14 rounded-md overflow-hidden">
-              <img
-                src="/images/ProfilePictureZoomed.png"
-                alt="Shane King"
-                className="object-cover w-full h-full"
-              />
-            </div>
+    <header
+      className="
+        border-b 
+        border-nk-border 
+        bg-slate-950/80 
+        backdrop-blur-md 
+        sticky 
+        top-0 
+        z-20
+      "
+    >
+      <nav
+        className="
+          mx-auto
+          w-full
+          flex
+          items-center
+          justify-between
+          px-[calc(var(--tetris-unit)*0.8)]
+          py-[calc(var(--tetris-unit)*0.1)]
+          max-w-[calc(var(--tetris-unit)*120)]
+        "
+      >
+        {/* LEFT SIDE (PROFILE + NAME) */}
+        <Link href="/" className="flex items-center gap-[calc(var(--tetris-unit)*0.4)]">
+          <div
+            className="
+              relative 
+              rounded-md 
+              overflow-hidden 
+              w-[calc(var(--tetris-unit)*1.3)]
+              h-[calc(var(--tetris-unit)*1.3)]
+            "
+          >
+            <img
+              src="/images/ProfilePictureZoomed.png"
+              alt="Shane King"
+              className="object-cover w-full h-full"
+            />
+          </div>
+
           <div className="flex flex-col leading-tight">
-            <span className="text-lg md:text-xl font-medium">Shane King</span>
-            <span className="text-[0.9rem] text-slate-400">
+            <span
+              className="
+                font-medium
+                text-xl
+              "
+            >
+              Shane King
+            </span>
+
+            <span
+              className="
+                text-slate-400
+                text-lg
+              "
+            >
               Software Engineer
             </span>
           </div>
         </Link>
-        <div className="flex gap-6 text-sm md:text-lg">
-          <div className="border-l border-nk-border"></div>
+
+        {/* RIGHT SIDE NAV LINKS */}
+        <div
+          className="
+            flex 
+            items-center 
+            gap-[calc(var(--tetris-unit)*1.2)]
+            text-xl
+          "
+        >
+          <div className="border-l border-nk-border h-[calc(var(--tetris-unit)*1.1)]" />
+
           <Link href="/projects" className="hover:text-nk-accent">
             Projects
           </Link>
-          <div className="border-l border-nk-border"></div>
+
+          <div className="border-l border-nk-border h-[calc(var(--tetris-unit)*1.1)]" />
+
           <Link href="/about" className="hover:text-nk-accent">
             About
           </Link>
-          <div className="border-l border-nk-border"></div>
+
+          <div className="border-l border-nk-border h-[calc(var(--tetris-unit)*1.1)]" />
+
           <Link href="/contact" className="hover:text-nk-accent">
             Contact
           </Link>
