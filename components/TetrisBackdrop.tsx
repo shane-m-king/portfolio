@@ -21,7 +21,7 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
           <div
             className="tetris-block tetris-T tcolor-purple"
             style={{
-              top: `calc(var(--tetris-unit) * 10)`,
+              top: `calc(var(--tetris-unit) * 9)`,
               left: "86.87%",
               transform: "rotate(90deg)"
             }}
@@ -29,7 +29,7 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
           <div
             className="tetris-block tetris-I tcolor-red"
             style={{
-              top: `calc(var(--tetris-unit) * 11)`,
+              top: `calc(var(--tetris-unit) * 10)`,
               left: "0.65%",
               transform: "rotate(90deg)"
             }}

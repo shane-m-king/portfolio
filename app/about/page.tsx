@@ -13,7 +13,7 @@ export default function AboutPage() {
           grid
           md:grid-cols-2
           mx-[2%]
-          gap-[calc(var(--tetris-unit)*0.2)]
+          gap-[calc(var(--tetris-unit)*0.05)]
           items-start
           max-w-[calc(var(--tetris-unit)*120)]
         ">
@@ -24,7 +24,7 @@ export default function AboutPage() {
               Hey, I'm Shane — a full-stack software engineer based in Seattle.
             </h1>
         
-            <p className="text-slate-300 text-base leading-relaxed">
+            <p className="text-slate-300 text-[1.08rem] leading-relaxed">
               I love using logic to solve problems and I think programming is fun.
               Whether I'm designing APIs, structuring database models,
               or polishing UI interactions, I enjoy turning complex
@@ -38,7 +38,7 @@ export default function AboutPage() {
               </h2>
 
     
-              <p className="text-base text-slate-200 leading-relaxed">
+              <p className="text-[1.08rem] text-slate-200 leading-relaxed">
                 Before engineering, I spent seven years as a professional content
                 creator on Twitch. What started as a creative outlet evolved into a
                 business that taught me self-management, project ownership, audience
@@ -46,7 +46,7 @@ export default function AboutPage() {
                 way I approach product development.
               </p>
     
-              <p className="text-base text-slate-200 leading-relaxed">
+              <p className="text-[1.08rem] text-slate-200 leading-relaxed">
                 After moving to the U.S., I decided to pursue a career
                 in software engineering. I completed Springboard's
                 Software Engineering Bootcamp in November 2025, building full-stack
@@ -61,14 +61,14 @@ export default function AboutPage() {
                 What I'm Looking For
               </h2>
     
-              <p className="text-base text-slate-200 leading-relaxed">
+              <p className="text-[1.08rem] text-slate-200 leading-relaxed">
                 I'm a fast learner, motivated by challenge, and excited to join a
                 team where I can build software that people enjoy using. My focus is
                 on creating products that are maintainable, scalable, and
                 thoughtfully designed.
               </p>
     
-              <p className="text-base text-slate-200 leading-relaxed">
+              <p className="text-[1.08rem] text-slate-200 leading-relaxed">
                 I'm currently seeking full-time opportunities as a software
                 engineer— ideally with a team that values collaboration and
                 continuous learning.
