@@ -12,15 +12,14 @@ export default function AboutPage() {
         <div className="
           grid
           md:grid-cols-2
-          gap-[calc(var(--tetris-unit)*0.4)]
+          mx-[2%]
+          gap-[calc(var(--tetris-unit)*0.2)]
           items-start
           max-w-[calc(var(--tetris-unit)*120)]
-          mx-auto
-          px-[calc(var(--tetris-unit)*0.8)]
         ">
         
           {/* LEFT COLUMN */}
-          <div className="space-y-[calc(var(--tetris-unit)*0.8)] mx-[calc(var(--tetris-unit)*0.6)]">        
+          <div className="space-y-[calc(var(--tetris-unit)*0.8)] mx-[calc(var(--tetris-unit)*0.4)] my-[calc(var(--tetris-unit)*0.3)]">        
             <h1 className="text-3xl font-semibold tracking-tight">
               Hey, I'm Shane — a full-stack software engineer based in Seattle.
             </h1>
@@ -114,7 +113,7 @@ export default function AboutPage() {
             </div>
         
             {/* IMAGE */}
-            <div className="relative w-[calc(var(--tetris-unit)*6)] h-[calc(var(--tetris-unit)*8)] rounded-lg overflow-hidden">
+            <div className="relative w-[calc(var(--tetris-unit)*6)] h-[calc(var(--tetris-unit)*7)] rounded-lg overflow-hidden">
               <img
                 src="/images/ProfilePicturev2.png"
                 alt="Shane King"
