@@ -35,8 +35,8 @@ export default function ProjectCard({ project, compact }: ProjectCardProps) {
       )}
 
       <div className={compact
-        ? "px-[calc(var(--tetris-unit)*0.5)] py-[calc(var(--tetris-unit)*0.4)] space-y-[calc(var(--tetris-unit)*0.35)]"
-        : "px-[calc(var(--tetris-unit)*0.7)] py-[calc(var(--tetris-unit)*0.3)] space-y-[calc(var(--tetris-unit)*0.3)]"
+        ? "px-[calc(var(--tetris-unit)*0.5)] py-[calc(var(--tetris-unit)*0.2)] space-y-[calc(var(--tetris-unit)*0.2)]"
+        : "px-[calc(var(--tetris-unit)*0.5)] py-[calc(var(--tetris-unit)*0.2)] space-y-[calc(var(--tetris-unit)*0.2)]"
       }>
         <h3 className="text-lg font-semibold tracking-tight">{project.name}</h3>
         <p className={`text-base text-slate-400 ${compact ? "line-clamp-2" : "line-clamp-3"}`}>
