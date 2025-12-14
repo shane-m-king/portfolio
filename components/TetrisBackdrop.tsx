@@ -22,7 +22,7 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-T tcolor-purple"
             style={{
               top: `calc(var(--tetris-unit) * 10)`,
-              left: `calc(var(--tetris-unit) * 23.2)`,
+              left: "86.87%",
               transform: "rotate(90deg)"
             }}
           />
@@ -30,7 +30,7 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-I tcolor-red"
             style={{
               top: `calc(var(--tetris-unit) * 11)`,
-              left: `calc(var(--tetris-unit) * -0.8)`,
+              left: "0.65%",
               transform: "rotate(90deg)"
             }}
           />
@@ -38,14 +38,14 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-O tcolor-blue"
             style={{
               top: `calc(var(--tetris-unit) * 7.5)`,
-              left: `calc(var(--tetris-unit) * 10.7)`
+              left: "43.6%"
             }}
           />
           <div
             className="tetris-block tetris-Z tcolor-yellow"
             style={{
               top: `calc(var(--tetris-unit) * 1)`,
-              left: `calc(var(--tetris-unit) * 5.2)`,
+              left: "23.05%",
               transform: "rotate(90deg)"
             }}
           />
@@ -53,7 +53,7 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-L tcolor-green"
             style={{
               top: `calc(var(--tetris-unit) * 2)`,
-              left: `calc(var(--tetris-unit) * 19.2)`,
+              left: "71.9%",
               transform: "rotate(90deg)"
             }}
           />
@@ -67,7 +67,7 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-L tcolor-blue"
             style={{
               top: `calc(var(--tetris-unit) * 8)`,
-              left: `calc(var(--tetris-unit) * 13.18)`,
+              left: "49.4%",
               transform: "rotate(270deg)"
             }}
           />
@@ -75,21 +75,21 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-I tcolor-yellow"
             style={{
               top: `calc(var(--tetris-unit) * 1.5)`,
-              left: `calc(var(--tetris-unit) * 3.68)`,
+              left: "13.8%",
             }}
           />
           <div
             className="tetris-block tetris-O tcolor-purple"
             style={{
               top: `calc(var(--tetris-unit) * 0.5)`,
-              left: `calc(var(--tetris-unit) * 20.68)`
+              left: "77.5%"
             }}
           />
           <div
             className="tetris-block tetris-T tcolor-red"
             style={{
               top: `calc(var(--tetris-unit) * 11)`,
-              left: `calc(var(--tetris-unit) * 0.18)`,
+              left: "0.7%",
               transform: "rotate(90deg)"
             }}
           />
@@ -97,7 +97,7 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-Z tcolor-green"
             style={{
               top: `calc(var(--tetris-unit) * 10.5)`,
-              left: `calc(var(--tetris-unit) * 24.68)`
+              left: "92.6%"
             }}
           />
         </>
@@ -110,7 +110,7 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-Z tcolor-yellow"
             style={{
               top: `calc(var(--tetris-unit) * 2)`,
-              left: `calc(var(--tetris-unit) * 7.32)`,
+              left: "31.2%",
               transform: "rotate(90deg)"
             }}
           />
@@ -118,7 +118,7 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-I tcolor-blue"
             style={{
               top: `calc(var(--tetris-unit) * 9)`,
-              left: `calc(var(--tetris-unit) * -0.68)`,
+              left: "1.1%",
               transform: "rotate(90deg)"
             }}
           />
@@ -126,15 +126,15 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-T tcolor-purple"
             style={{
               top: `calc(var(--tetris-unit) * 6)`,
-              left: `calc(var(--tetris-unit) * 21.31)`,
+              left: "79.85%",
               transform: "rotate(270deg)"
             }}
           />
           <div
             className="tetris-block tetris-T tcolor-purple"
             style={{
-              top: `calc(var(--tetris-unit) * 15.95)`,
-              left: `calc(var(--tetris-unit) * 4.84)`,
+              top: `calc(var(--tetris-unit) * 15.55)`,
+              left: "18%",
               transform: "rotate(180deg)"
             }}
           />
@@ -142,15 +142,15 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-L tcolor-green"
             style={{
               top: `calc(var(--tetris-unit) * 10)`,
-              left: `calc(var(--tetris-unit) * 12.32)`,
+              left: "46.2%",
               transform: "rotate(90deg)"
             }}
           />
           <div
             className="tetris-block tetris-O tcolor-red"
             style={{
-              top: `calc(var(--tetris-unit) * 16.95)`,
-              left: `calc(var(--tetris-unit) * 23.82)`
+              top: `calc(var(--tetris-unit) * 16.55)`,
+              left: "89.3%"
             }}
           />
         </>
@@ -163,7 +163,7 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-T tcolor-yellow"
             style={{
               top: `calc(var(--tetris-unit) * 4)`,
-              left: `calc(var(--tetris-unit) * 0.38)`,
+              left: "1.25%",
               transform: "rotate(90deg)"
             }}
           />
@@ -171,7 +171,7 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-T tcolor-yellow"
             style={{
               top: `calc(var(--tetris-unit) * 15.18)`,
-              left: `calc(var(--tetris-unit) * 15.8)`,
+              left: "59.4%",
               transform: "rotate(180deg)"
             }}
           />
@@ -179,7 +179,7 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-I tcolor-red"
             style={{
               top: `calc(var(--tetris-unit) * 8)`,
-              left: `calc(var(--tetris-unit) * 12.33)`,
+              left: "50%",
               transform: "rotate(90deg)"
             }}
           />
@@ -187,28 +187,28 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-Z tcolor-purple"
             style={{
               top: `calc(var(--tetris-unit) * 1.5)`,
-              left: `calc(var(--tetris-unit) * 22.84)`
+              left: "89.35%"
             }}
           />
           <div
             className="tetris-block tetris-O tcolor-green"
             style={{
               top: `calc(var(--tetris-unit) * 10.45)`,
-              left: `calc(var(--tetris-unit) * 23.83)`
+              left: "89.35%"
             }}
           />
           <div
             className="tetris-block tetris-O tcolor-green"
             style={{
               top: `calc(var(--tetris-unit) * 16.2)`,
-              left: `calc(var(--tetris-unit) * 2.78)`
+              left: "10.5%"
             }}
           />
           <div
             className="tetris-block tetris-L tcolor-blue"
             style={{
               top: `calc(var(--tetris-unit) * 11)`,
-              left: `calc(var(--tetris-unit) * 7.33)`,
+              left: "27.4%",
               transform: "rotate(90deg)"
             }}
           />
@@ -222,14 +222,14 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-L tcolor-red"
             style={{
               top: `calc(var(--tetris-unit) * 2.5)`,
-              left: `calc(var(--tetris-unit) * 11.65)`
+              left: "43.6%"
             }}
           />
           <div
             className="tetris-block tetris-I tcolor-blue"
             style={{
               top: `calc(var(--tetris-unit) * 10)`,
-              left: `calc(var(--tetris-unit) * 16.18)`,
+              left: "60.6%",
               transform: "rotate(90deg)"
             }}
           />
@@ -237,21 +237,21 @@ export default function TetrisBackdrop({ layout }: { layout: Layout }) {
             className="tetris-block tetris-T tcolor-yellow"
             style={{
               top: `calc(var(--tetris-unit) * 4.5)`,
-              left: `calc(var(--tetris-unit) * 20.68)`
+              left: "73.8%"
             }}
           />
           <div
             className="tetris-block tetris-O tcolor-purple"
             style={{
               top: `calc(var(--tetris-unit) * 9.5)`,
-              left: `calc(var(--tetris-unit) * 7.68)`
+              left: "28.75%"
             }}
           />
           <div
             className="tetris-block tetris-Z tcolor-green"
             style={{
               top: `calc(var(--tetris-unit) * 3.5)`,
-              left: `calc(var(--tetris-unit) * 2.68)`
+              left: "10%"
             }}
           />
         </>
