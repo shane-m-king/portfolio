@@ -35,7 +35,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-nk-bg text-slate-100 flex flex-col font-body">
         <div className="nk-bg-grid" />
         <NavBar />
-        <main className="flex-1 container mx-auto px-4 py-10 relative z-10">
+        <main className="flex-1 container items-center mx-auto py-[calc(var(--tetris-unit)*0.7)] relative z-10">
           {children}
         </main>
         <Footer />
