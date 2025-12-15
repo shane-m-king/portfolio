@@ -7,7 +7,7 @@ export default function ContactPage() {
         <TetrisBackdrop layout="contact" />
       </div>
 
-      <p className="nk-heading-pixel text-[calc(var(--tetris-unit)*0.4)] uppercase tracking-[0.25em] text-nk-accent text-center">
+      <p className="nk-heading-pixel md:text-[calc(var(--tetris-unit)*0.4)] text-[calc(var(--tetris-unit)*1.2)] uppercase tracking-[0.25em] text-nk-accent text-center">
         Contact
       </p>
 

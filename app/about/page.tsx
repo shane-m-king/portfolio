@@ -4,7 +4,7 @@ export default function AboutPage() {
   return (
     <>
       <div className="hidden md:block"><TetrisBackdrop layout="about" /></div>
-      <p className="nk-heading-pixel text-[calc(var(--tetris-unit)*0.4)] uppercase tracking-[0.25em] text-nk-accent">
+      <p className="nk-heading-pixel md:text-[calc(var(--tetris-unit)*0.4)] text-[calc(var(--tetris-unit)*1.2)] uppercase tracking-[0.25em] text-nk-accent">
          About Me
       </p>
       <section className="mt-[calc(var(--tetris-unit)*0.5)]">

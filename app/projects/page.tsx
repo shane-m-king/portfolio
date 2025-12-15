@@ -19,7 +19,7 @@ export default function ProjectsPage() {
       >
         {/* HEADER */}
         <header className="space-y-[calc(var(--tetris-unit)*0.6)]">
-          <p className="nk-heading-pixel text-[calc(var(--tetris-unit)*0.4)] uppercase tracking-[0.25em] text-nk-accent">
+          <p className="nk-heading-pixel md:text-[calc(var(--tetris-unit)*0.4)] text-[calc(var(--tetris-unit)*1.2)] uppercase tracking-[0.25em] text-nk-accent">
             Projects
           </p>
 

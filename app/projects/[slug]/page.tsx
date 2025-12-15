@@ -41,7 +41,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <TetrisBackdrop layout="project" />
       </div>
 
-      <p className="nk-heading-pixel text-[calc(var(--tetris-unit)*0.4)] text-nk-accent uppercase">
+      <p className="nk-heading-pixel md:text-[calc(var(--tetris-unit)*0.4)] text-[calc(var(--tetris-unit)*1.2)] text-nk-accent uppercase">
         Project
       </p>
 
