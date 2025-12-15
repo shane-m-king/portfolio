@@ -69,7 +69,7 @@ export default function ProjectImageCarousel({ images, alt }: Props) {
               type="button"
               onClick={(e) => { e.stopPropagation(); prev(); }}
               className="
-                md:text-xs text-xl font-pixel tracking-wide
+                md:text-xs text-2xl font-pixel tracking-wide
                 bg-slate-900/70 hover:bg-slate-800/90
                 border border-nk-accent-muted/60
                 text-slate-200
@@ -86,7 +86,7 @@ export default function ProjectImageCarousel({ images, alt }: Props) {
               type="button"
               onClick={(e) => { e.stopPropagation(); next(); }}
               className="
-                md:text-xs text:xl font-pixel tracking-wide
+                md:text-xs text-2xl font-pixel tracking-wide
                 bg-slate-900/70 hover:bg-slate-800/90
                 border border-nk-accent-muted/60
                 text-slate-200
