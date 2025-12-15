@@ -171,7 +171,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className="pt-[calc(var(--tetris-unit)*0.1)]">
           <Link
             href="/projects"
-            className="nk-btn-primary w-full max-w-[calc(var(--tetris-unit)*3.2)] justify-center text-base"
+            className="nk-btn-primary w-full md:max-w-[calc(var(--tetris-unit)*3.2)] max-w-[calc(var(--tetris-unit)*5.5)] justify-center md:text-base text-sm"
           >
             Back to Projects
           </Link>

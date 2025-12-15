@@ -32,7 +32,7 @@ export default function Navbar() {
               relative 
               rounded-md 
               overflow-hidden 
-              md:w-[calc(var(--tetris-unit)*1.3)] w-[calc(var(--tetris-unit)*5)]
+              md:w-[calc(var(--tetris-unit)*1.3)] w-[calc(var(--tetris-unit)*4)]
               md:h-[calc(var(--tetris-unit)*1.3)] h-[calc(var(--tetris-unit)*4)]
             "
           >
@@ -56,7 +56,7 @@ export default function Navbar() {
             <span
               className="
                 text-slate-400
-                md:text-lg text-sm
+                md:text-lg text-xs
               "
             >
               Software Engineer

@@ -52,7 +52,7 @@ export default function ContactPage() {
               className="
                 nk-card
                 w-full
-                max-w-[calc(var(--tetris-unit)*8)]
+                md:max-w-[calc(var(--tetris-unit)*8)] max-w-[calc(var(--tetris-unit)*24)]
                 p-[calc(var(--tetris-unit)*0.5)]
                 space-y-[calc(var(--tetris-unit)*0.4)]
                 bg-slate-800/60
