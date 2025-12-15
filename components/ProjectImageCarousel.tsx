@@ -46,7 +46,7 @@ export default function ProjectImageCarousel({ images, alt }: Props) {
           {...handlers}
           className="
             relative
-            w-full max-w-[calc(var(--tetris-unit)*8)] md:max-w-[calc(var(--tetris-unit)*11)]
+            w-full md:max-w-[calc(var(--tetris-unit)*11)] max-w-[calc(var(--tetris-unit)*28)]
             aspect-[16/9]
             rounded-lg border border-nk-accent-muted/60 overflow-hidden
             shadow-[0_0_calc(var(--tetris-unit)*0.6)_rgba(34,197,94,0.15)]

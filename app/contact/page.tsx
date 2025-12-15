@@ -31,7 +31,7 @@ export default function ContactPage() {
         >
           {/* LEFT COLUMN */}
           <div className="space-y-[calc(var(--tetris-unit)*0.6)] mt-[calc(var(--tetris-unit)*0.4)]">
-            <h1 className="text-3xl font-semibold tracking-tight">
+            <h1 className="text-3xl font-semibold tracking-tight ">
               Let's get in touch.
             </h1>
 
