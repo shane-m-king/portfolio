@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <>
       <div className="hidden md:block"><TetrisBackdrop layout="home" /></div>
-      <p className="nk-heading-pixel md:text-[calc(var(--tetris-unit)*0.4) text-[calc(var(--tetris-unit)*1.2)] text-nk-accent">
+      <p className="nk-heading-pixel md:text-[calc(var(--tetris-unit)*0.4)] text-[calc(var(--tetris-unit)*1.2)] uppercase tracking-[0.25em] text-nk-accent">
           SOFTWARE ENGINEER • SEATTLE
       </p>
       <section
