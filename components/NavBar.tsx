@@ -32,7 +32,7 @@ export default function Navbar() {
               relative 
               rounded-md 
               overflow-hidden 
-              md:w-[calc(var(--tetris-unit)*1.3)] w-[calc(var(--tetris-unit)*4)]
+              md:w-[calc(var(--tetris-unit)*1.3)] w-[calc(var(--tetris-unit)*5)]
               md:h-[calc(var(--tetris-unit)*1.3)] h-[calc(var(--tetris-unit)*4)]
             "
           >
@@ -47,7 +47,7 @@ export default function Navbar() {
             <span
               className="
                 font-medium
-                text-xl
+                md:text-xl text-lg
               "
             >
               Shane King
@@ -56,7 +56,7 @@ export default function Navbar() {
             <span
               className="
                 text-slate-400
-                text-lg
+                md:text-lg text-base
               "
             >
               Software Engineer
@@ -70,22 +70,22 @@ export default function Navbar() {
             flex 
             items-center 
             gap-[calc(var(--tetris-unit)*1.2)]
-            text-xl
+            md:text-xl text-lg
           "
         >
-          <div className="border-l border-nk-border h-[calc(var(--tetris-unit)*1.1)]" />
+          <div className="border-l border-nk-border md:h-[calc(var(--tetris-unit)*1.1)] h-[calc(var(--tetris-unit)*4)]" />
 
           <Link href="/projects" className="hover:text-nk-accent">
             Projects
           </Link>
 
-          <div className="border-l border-nk-border h-[calc(var(--tetris-unit)*1.1)]" />
+          <div className="border-l border-nk-border md:h-[calc(var(--tetris-unit)*1.1)] h-[calc(var(--tetris-unit)*4)]" />
 
           <Link href="/about" className="hover:text-nk-accent">
             About
           </Link>
 
-          <div className="border-l border-nk-border h-[calc(var(--tetris-unit)*1.1)]" />
+          <div className="border-l border-nk-border md:h-[calc(var(--tetris-unit)*1.1)] h-[calc(var(--tetris-unit)*4)]" />
 
           <Link href="/contact" className="hover:text-nk-accent">
             Contact
