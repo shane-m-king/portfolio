@@ -32,8 +32,8 @@ export default function Navbar() {
               relative 
               rounded-md 
               overflow-hidden 
-              w-[calc(var(--tetris-unit)*1.3)]
-              h-[calc(var(--tetris-unit)*1.3)]
+              md:w-[calc(var(--tetris-unit)*1.3)] w-[calc(var(--tetris-unit)*4)]
+              md:h-[calc(var(--tetris-unit)*1.3)] h-[calc(var(--tetris-unit)*4)]
             "
           >
             <img
