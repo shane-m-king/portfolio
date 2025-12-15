@@ -34,7 +34,7 @@ export default function HomePage() {
         > 
           {/* LEFT COLUMN: intro text */}
           <div className="space-y-[calc(var(--tetris-unit)*0.7)] mt-[calc(var(--tetris-unit)*0.6)]">
-            <h1 className="text-3xl font-semibold tracking-tight max-w-[92%]">
+            <h1 className="md:text-3xl text-2xl font-semibold tracking-tight max-w-[92%]">
               I build full-stack web apps with{" "}
               <span className="text-nk-accent">Next.js</span> and a focus on
               clean architecture, great UX, and game-inspired polish.

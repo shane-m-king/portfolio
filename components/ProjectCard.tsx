@@ -48,8 +48,8 @@ export default function ProjectCard({ project, compact }: ProjectCardProps) {
             <span
               key={tag}
               className={idx === 0
-                ? "nk-chip-accent text-[calc(var(--tetris-unit)*0.25)]"
-                : "nk-chip text-[calc(var(--tetris-unit)*0.25)]"
+                ? "nk-chip-accent md:text-[calc(var(--tetris-unit)*0.25)] text-[calc(var(--tetris-unit)*1)]"
+                : "nk-chip md:text-[calc(var(--tetris-unit)*0.25)] text-[calc(var(--tetris-unit)*1)]"
               }
             >
               {tag}

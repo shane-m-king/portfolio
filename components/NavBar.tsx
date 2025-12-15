@@ -47,7 +47,7 @@ export default function Navbar() {
             <span
               className="
                 font-medium
-                md:text-xl text-lg
+                md:text-xl text-base
               "
             >
               Shane King
@@ -56,7 +56,7 @@ export default function Navbar() {
             <span
               className="
                 text-slate-400
-                md:text-lg text-base
+                md:text-lg text-sm
               "
             >
               Software Engineer
@@ -70,7 +70,7 @@ export default function Navbar() {
             flex 
             items-center 
             gap-[calc(var(--tetris-unit)*1.2)]
-            md:text-xl text-lg
+            md:text-xl text-base
           "
         >
           <div className="border-l border-nk-border md:h-[calc(var(--tetris-unit)*1.1)] h-[calc(var(--tetris-unit)*4)]" />
