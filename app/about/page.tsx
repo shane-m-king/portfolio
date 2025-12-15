@@ -113,7 +113,7 @@ export default function AboutPage() {
             </div>
         
             {/* IMAGE */}
-            <div className="relative w-[calc(var(--tetris-unit)*6)] h-[calc(var(--tetris-unit)*7)] rounded-lg overflow-hidden">
+            <div className="relative md:w-[calc(var(--tetris-unit)*6)] w-[calc(var(--tetris-unit)*12)] md:h-[calc(var(--tetris-unit)*7)] h-[calc(var(--tetris-unit)*14) rounded-lg overflow-hidden">
               <img
                 src="/images/ProfilePicturev2.png"
                 alt="Shane King"
@@ -128,7 +128,7 @@ export default function AboutPage() {
                 grid-cols-2
                 gap-[calc(var(--tetris-unit)*0.2)]
                 w-full
-                max-w-[calc(var(--tetris-unit)*11)]
+                md:max-w-[calc(var(--tetris-unit)*11)]
               "
             >
               <div className="nk-card p-[calc(var(--tetris-unit)*0.2)] space-y-[calc(var(--tetris-unit)*0.2)] bg-slate-800/60 backdrop-blur-sm border-nk-accent-muted/60">
