@@ -69,7 +69,7 @@ export default function ProjectImageCarousel({ images, alt }: Props) {
               type="button"
               onClick={(e) => { e.stopPropagation(); prev(); }}
               className="
-                md:text-xs text-base font-pixel tracking-wide
+                md:text-xs text-xl font-pixel tracking-wide
                 bg-slate-900/70 hover:bg-slate-800/90
                 border border-nk-accent-muted/60
                 text-slate-200
@@ -103,15 +103,15 @@ export default function ProjectImageCarousel({ images, alt }: Props) {
 
         {/* DOTS */}
         {images.length > 1 && (
-          <div className="flex md:gap-[calc(var(--tetris-unit)*0.25)] gap-[calc(var(--tetris-unit)*0.4)] md:mt-[calc(var(--tetris-unit)*0.15)] mt-[calc(var(--tetris-unit)*0.5]">
+          <div className="flex md:gap-[calc(var(--tetris-unit)*0.25)] gap-[calc(var(--tetris-unit)*0.25)] mt-[calc(var(--tetris-unit)*0.2)]">
             {images.map((_, i) => (
               <button
                 key={i}
                 type="button"
                 onClick={(e) => { e.stopPropagation(); setIndex(i); }}
                 className={`
-                  md:w-[calc(var(--tetris-unit)*0.2)] w-[calc(var(--tetris-unit)*0.8)]
-                  md:h-[calc(var(--tetris-unit)*0.2)] h-[calc(var(--tetris-unit)*0.8)]
+                  md:w-[calc(var(--tetris-unit)*0.28)] w-[calc(var(--tetris-unit)*0.8)]
+                  md:h-[calc(var(--tetris-unit)*0.28)] h-[calc(var(--tetris-unit)*0.8)]
                   rounded-full transition
                   ${index === i ? "bg-emerald-400 scale-125" : "bg-slate-600 hover:bg-slate-500"}
                 `}
