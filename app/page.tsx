@@ -34,13 +34,13 @@ export default function HomePage() {
         > 
           {/* LEFT COLUMN: intro text */}
           <div className="space-y-[calc(var(--tetris-unit)*0.7)] mt-[calc(var(--tetris-unit)*0.6)]">
-            <h1 className="text-3xl md:text-[2.1rem] font-semibold tracking-tight max-w-[92%]">
+            <h1 className="text-3xl font-semibold tracking-tight max-w-[92%]">
               I build full-stack web apps with{" "}
               <span className="text-nk-accent">Next.js</span> and a focus on
               clean architecture, great UX, and game-inspired polish.
             </h1>
 
-            <p className="text-slate-300 max-w-xl text-base md:text-base">
+            <p className="text-slate-300 max-w-xl text-base md:text-lg">
               Former Twitch creator turned software engineer. I love building
               game-adjacent tools, applications, and systems that feel responsive,
               intuitive, and fun to use.
@@ -79,7 +79,7 @@ export default function HomePage() {
 
         {/* FEATURED PROJECT — BELOW BOTH COLUMNS */}
         <div className="flex justify-center">
-          <div className="w-full max-w-[calc(var(--tetris-unit)*14)]">
+          <div className="md:w-full md:max-w-[calc(var(--tetris-unit)*14)] max-w-[calc(var(--tetris-unit)*24)] ">
             <p className="nk-heading-pixel text-lg text-slate-400 mb-2 text-center">
               FEATURED PROJECT
             </p>
