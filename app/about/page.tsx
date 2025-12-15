@@ -79,7 +79,7 @@ export default function AboutPage() {
           {/* RIGHT COLUMN */}
           <div className="flex flex-col place-items-center gap-[calc(var(--tetris-unit)*0.7)]">
             {/* CTA PANEL */}
-            <div className="nk-card p-[calc(var(--tetris-unit)*0.3)] flex flex-col items-center gap-[calc(var(--tetris-unit)*0.2)] bg-slate-800/60 backdrop-blur-sm border-nk-accent-muted/60 w-full max-w-[calc(var(--tetris-unit)*10)]">
+            <div className="nk-card p-[calc(var(--tetris-unit)*0.3)] flex flex-col items-center gap-[calc(var(--tetris-unit)*0.2)] bg-slate-800/60 backdrop-blur-sm border-nk-accent-muted/60 w-full md:max-w-[calc(var(--tetris-unit)*10)]">
               <h3 className="text-base font-semibold uppercase tracking-wide text-slate-300">Quick Links</h3>
             
               <div className="flex gap-[calc(var(--tetris-unit)*0.4)] text-sm">
